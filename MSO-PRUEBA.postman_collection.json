@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "eeb27594-346e-4a0a-957a-63444f8ff220",
+		"name": "MSO-PRUEBA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6989623",
+		"_collection_link": "https://grey-equinox-198459.postman.co/workspace/test~b9655a06-10c0-498a-bf4e-a1b965b09085/collection/6989623-eeb27594-346e-4a0a-957a-63444f8ff220?action=share&creator=6989623&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"eguillenm\",\r\n    \"password\": \"Lalo1994\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10443/mso-prueba/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10443",
+					"path": [
+						"mso-prueba",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "procesos/productos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndWlsbGVubWFsZG9uYWRvZWR1YXJkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQxNzEzNjEsImV4cCI6MTY4NDE3NDk2MX0._wtaOfhRV4YGw4bLiqDvOM8c7zSun1Shq5sBtsSOmd9PQEoxrH9__lR4_E0UB75RDYGqJjnC1ZT7M-F93Ovmlw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"test123\",\r\n    \"precio\":40.0,\r\n    \"cantidad\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10443/mso-prueba/v1/procesos/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10443",
+					"path": [
+						"mso-prueba",
+						"v1",
+						"procesos",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "procesos/productos/busquedas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndWlsbGVubWFsZG9uYWRvZWR1YXJkb0BnbWFpbC5jb20iLCJpYXQiOjE2ODQxNzEzNjEsImV4cCI6MTY4NDE3NDk2MX0._wtaOfhRV4YGw4bLiqDvOM8c7zSun1Shq5sBtsSOmd9PQEoxrH9__lR4_E0UB75RDYGqJjnC1ZT7M-F93Ovmlw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10443/mso-prueba/v1/procesos/productos/busquedas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10443",
+					"path": [
+						"mso-prueba",
+						"v1",
+						"procesos",
+						"productos",
+						"busquedas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuario",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlZ3VpbGxlbm0iLCJjcmVhdGVkIjoxNjg1MjgwMDkwMTMyLCJleHAiOjE2ODU4ODQ4OTB9.Pm0AvH2va3LNEfzbvtFHbgdmplMhnKXhqybWlF5WSVCJBwThfK_AyB9_toR7pD_1L-5h0g1YmJp-K_Yaail8rw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlZ3VpbGxlbm0iLCJjcmVhdGVkIjoxNjg1MjgwMDkwMTMyLCJleHAiOjE2ODU4ODQ4OTB9.Pm0AvH2va3LNEfzbvtFHbgdmplMhnKXhqybWlF5WSVCJBwThfK_AyB9_toR7pD_1L-5h0g1YmJp-K_Yaail8rw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:10443/mso-prueba/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10443",
+					"path": [
+						"mso-prueba",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
